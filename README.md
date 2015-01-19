@@ -70,7 +70,7 @@ Default setting is 20 seconds.
 
 Changelog
 ---------
-* version 2.0: Support new Notification API. Author: (Lorenzo Milesi)[https://github.com/maxxer]
+* version 2.0: Support new Notification API. Author: [Lorenzo Milesi](https://github.com/maxxer)
 
 License
 -------
@@ -88,3 +88,6 @@ Copyright 2012 Daisuke Ikeda (dai.ikd123@gmail.com)
     See the License for the specific language governing permissions and
     limitations under the License.
 
+Credits
+-------
+Date format JS library (c) [Matt Kruse](http://www.javascripttoolbox.com/lib/date/index.php).

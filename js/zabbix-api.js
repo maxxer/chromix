@@ -34,7 +34,7 @@ function Login(){
 	var password = $("#password").val();
 	var https_flag = $("#ssl").is(':checked');
 
-	var auth = getAuth(url,username,password,https_flag);
+	var auth = getAuth(url,username,passwmrd,https_flag);
 	if( auth.result != null ){
 		if( auth.result == "Connection Error!" ){
 			outputError(auth.result);
@@ -366,14 +366,7 @@ function htmlResize(){
 function unixtimeToDate(ut, TZ) {
 	var tD = new Date( ut * 1000 );
 	tD.setTime( tD.getTime() + (60*60*1000 * TZ) );
-	var yy = tD.getYear();
-	var mm = tD.getMonth() + 1;
-	var dd = tD.getDate();
-	if (yy < 2000) { yy += 1900; }
-	if (mm < 10) { mm = "0" + mm; }
-	if (dd < 10) { dd = "0" + dd; }
-	var time = yy + "/" + mm + "/" + dd + " " + tD.getHours() + ":" + tD.getMinutes() + ":" + tD.getSeconds();
-	return time;
+	return tD.format("yyyy/MM/dd HH:mm:ss");
 }
 
 
