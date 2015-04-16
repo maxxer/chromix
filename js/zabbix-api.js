@@ -438,6 +438,7 @@ function getAllTrigger(url, token, ckecktime, https_flag) {
    		params.sortfield = "lastchange";
 		params.sortorder = "DESC";
 	    params.filter = filter;
+        params.selectHosts = ['maintenance_status'];
 	var dataRequest = new Object();
 		dataRequest.params = params;
 		dataRequest.auth = token;
@@ -471,7 +472,7 @@ function notificationCheck(trigger_data){
 	var last_checktime = now - background_rate;
 	var msg = "";
         // Check if the users wants to be notified for hosts in maintenance
-        if (maintenance_notification == "Off" && trigger_data["hosts"][0]['host_maintenance'] == "1")
+        if (maintenance_notification == "Off" && (typeof trigger_data["hosts"] != 'undefined') && trigger_data["hosts"][0]['maintenance_status'] == "1")
             return;
 	if(last_checktime < trigger_data["lastchange"] ){
 		msg += trigger_data["host"];

@@ -75,6 +75,8 @@ Default setting is 20 seconds.
 
 Changelog
 ---------
+* version 2.1.1:
+    * Bugfix for maintenance checks
 * version 2.1:
     * Support Zabbix maintenance time. Author: Author: [Lorenzo Milesi](https://github.com/maxxer)
 * version 2.0:
